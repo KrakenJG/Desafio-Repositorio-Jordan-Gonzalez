@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Exo', sans-serif;
+    color: white;
+}
+body {
+    height: 100vh;
+}
+header {
+    grid-area: header;
+    background-color: rgb(0, 140, 140);
+    width: 100vw
+}
+nav {
+    font-size: 1rem;
+    width: 100%;
+}
+li:hover {
+    background-color: rgb(254, 35, 97);
+}
+section {
+    grid-area: mainPortada;
+    width: 100%;
+}
+main {
+    grid-area: mainContenido;
+    width: 100%;
+}
+article {
+    text-align: center;
+}
+h2 {
+    color: black;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.5rem;
+}
+h3 {
+    color: black;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
+p {
+    color: black;
+    padding: 10px;
+    margin: 5px;
+}
+div {
+    color: black;
+}
+span {
+    width: 100%;
+}
+input  {
+    color: black;
+    padding: 3px;
+    margin: 3px;
+}
+select {
+    color: black;
+}
+option {
+    color: black;
+}
+footer {
+    grid-area: piePagina;
+    background-color: black;
+    font-size: 1rem;
+}
+footer img {
+    width: 10vw;
+    min-width: 50px;
+    max-width: 100px;
+    height: auto;
+    padding: 3px;
+}
+
+.gridAreas {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "mainPortada"
+    "mainContenido"
+    "piePagina"
+    ;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 3fr 3fr 1fr;
+}
+
+.portada {
+    object-fit: cover;
+    width: 100%;
+    height: 40vh;
+}
+.contenidoFooter {
+    text-align: center;
+    padding: 15px;
+}
+.borderProd {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+}
+.redes {
+    width: auto;
+}
+.redes div {
+    background-color: tomato;
+    color: black;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid black;
+}
+.centrarFormulario label {
+    text-align: center;
+    color: black;
+}
+.textArea {
+    width: 95vw;
+    color: black;
+    margin: 5px;
+}
+
+/* SMARTPHONE */
+@media (max-width: 480px) {
+    body {
+        height: 100vh;
+    }
+    li {
+        background-color: rgb(7, 34, 47);
+        padding: 15px;
+        border: 2px orangered;
+        border-style: dashed solid;
+    }
+
+    .navMenu {
+        display: flex;
+        flex-direction: column;
+    }
+    .navList {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        margin: 5px;
+    }
+    .logo {
+        width: 100%;
+    }
+    .logoImg {
+        width: 10vw;
+        min-width: 50px;
+        max-width: 100px;
+        height: auto;
+        padding: 3px;
+    }
+    .catalogoProd {
+        display: flex;
+        flex-direction: column;
+    }
+    .iframe {
+        height: 32vh;
+    }
+}
+
+/* TABLET */
+@media (min-width: 481px) and (max-width: 1023px) {
+    body {
+        height: 100vh;
+    }
+    li {
+        background-color: rgb(7, 34, 47);
+        padding: 10px;
+        margin: 5px;
+        border: 2px solid orangered;
+        border-radius: 10px;
+    }
+    .navMenu {
+        display: flex;
+        flex-direction: column;
+    }
+    .navList {
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5px;
+        margin: 5px;
+    }
+    .logo {
+        width: 100%;
+    }
+    .logoImg {
+        width: 10vw;
+        min-width: 50px;
+        max-width: 100px;
+        height: auto;
+        padding: 3px;
+    }
+    .catalogoProd {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .iframe {
+        height: 69vh;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+    body {
+        height: 100vh;
+    }
+    header {
+        position: sticky;
+        top: 0%;
+    }
+    li {
+        background-color: rgb(7, 34, 47);
+        padding: 10px;
+        border: 2px solid orangered;
+        border-radius: 10px;
+    }
+    .navMenu {
+        display: flex;
+        width: 100vw;
+    }
+    .navList {
+        display: flex;
+        width: 100vw;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .logo {
+        width: 15%;
+    }
+    .logoImg {
+        width: 15vw;
+        max-width: 100px;
+        height: auto;
+        padding: 3px;
+    }
+    .catalogoProd {
+        display: flex;
+        flex-direction: row;
+    }
+    .iframe {
+        height: 69vh;
+    }
+}
+
+
